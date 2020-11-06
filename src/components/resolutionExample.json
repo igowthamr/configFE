@@ -1,0 +1,247 @@
+{
+  "publishedLastTelecastDate": {
+    "year": 2020,
+    "month": 3,
+    "day": 24
+  },
+  "_id": "5e7461b34d82f133ccb74cb2",
+  "seqId": 312,
+  "productName": "mgg_multichannel_test",
+  "status": "PUBLISHED",
+  "dpOrder": "A160A020",
+  "lastPublishedDate": {
+    "date": {
+      "year": 2020,
+      "month": 3,
+      "day": 20
+    },
+    "time": {
+      "hour": 6,
+      "minute": 24,
+      "second": 51,
+      "nano": 864000000
+    }
+  },
+  "lastModifiedDate": {
+    "date": {
+      "year": 2020,
+      "month": 3,
+      "day": 20
+    },
+    "time": {
+      "hour": 6,
+      "minute": 24,
+      "second": 51,
+      "nano": 864000000
+    }
+  },
+  "planClassAsc": "Direct Response-Local, Direct Response-National",
+  "planClassDesc": "Direct Response-National, Direct Response-Local",
+  "statusOrder": 2,
+  "platform": "LINEAR",
+  "active": true,
+  "createdBy": "supportops@devnbcu.com",
+  "createdDate": {
+    "date": {
+      "year": 2020,
+      "month": 3,
+      "day": 20
+    },
+    "time": {
+      "hour": 6,
+      "minute": 24,
+      "second": 51,
+      "nano": 727000000
+    }
+  },
+  "genres": [
+    {
+      "_id": "ibQFFK38TN-24-FvzFsTRA",
+      "name": "Business"
+    }
+  ],
+  "lastModifiedBy": "supportops@devnbcu.com",
+  "commonTZ": false,
+  "productType": "LINEAR",
+  "advtExclusions": [
+    {
+      "advertiser": {
+        "id": "5e26f18c4d9c00225308a4a9",
+        "name": "Devoras test1"
+      },
+      "dateRange": {
+        "startDate": {
+          "year": 2020,
+          "month": 3,
+          "day": 10
+        },
+        "endDate": {
+          "year": 2020,
+          "month": 3,
+          "day": 24
+        }
+      }
+    }
+  ],
+  "daysAndTime": {
+    "timeOrder": {
+      "lowerbound": 13,
+      "upperbound": 319.67
+    },
+    "dowOrder": 3,
+    "daysOfWeek": ["M", "TU", "W", "TH", "F", "SA", "SU"],
+    "startTime": "00:00",
+    "endTime": "23:59",
+    "dayAndTime": "M-Su 12:00AM-11:59PM",
+    "crossOver": false,
+    "shifted": false
+  },
+  "telecastDate": {
+    "firstTelecastDate": {
+      "year": 2020,
+      "month": 3,
+      "day": 10
+    },
+    "lastTelecastDate": {
+      "year": 2020,
+      "month": 3,
+      "day": 24
+    }
+  },
+  "scopeType": {
+    "id": "11JsyTE_SiGADzmypwGmOQ",
+    "name": "Oleg test 663"
+  },
+  "excludeROSSpots": false,
+  "airingType": {
+    "id": "YdNNDgAWQ2KOUsJV-Fg--w",
+    "name": "Drama"
+  },
+  "planClasses": [
+    {
+      "id": "aL1YDygdT5Kp2cSzf6Sg-g",
+      "name": "Direct Response-Local"
+    },
+    {
+      "id": "8c0LVfCtTByVAWhOdOdAAg",
+      "name": "Direct Response-National"
+    }
+  ],
+  "productCategories": [
+    {
+      "id": "TZ-Gq41-SbOAXKl6WN3BYQ",
+      "name": "Alianza de Futbol"
+    },
+    {
+      "id": "Ps2oiq1mQPOvZD17UWxyUA",
+      "name": "Barter"
+    },
+    {
+      "id": "BGwTMnnjS-6FWBy1gSpVgg",
+      "name": "Biathlon"
+    },
+    {
+      "id": "GD_PJHbqSeiautVoenVk0w",
+      "name": "Concert"
+    }
+  ],
+  "channelDetails": [
+    {
+      "productSet": {
+        "id": "VgoNsc1LQJOPnYXQbThuVQ",
+        "name": "Unscripted (MSNBC)",
+        "channel": ["Q97bOhQkQwaJBzIkdtZsoQ"]
+      },
+      "station": {
+        "_id": "W-EBeG6GQv2bEZFYG7gIlw",
+        "name": "NBC Universo West",
+        "code": "UdXEti",
+        "timeZone": "Eastern",
+        "affiliation": "devnbcu",
+        "broadcast": {
+          "firstDayOfWeek": "Monday",
+          "trafficStartTime": "05:00",
+          "trafficEndTime": "04:59",
+          "timeZone": "UTC- Eastern"
+        },
+        "displayCallLetter": "NBC Universo West",
+        "market": {
+          "_id": "MqGun_EQSaat-dVCFCF_xQ",
+          "name": "National",
+          "displayName": "National",
+          "active": false
+        },
+        "marketId": "MqGun_EQSaat-dVCFCF_xQ"
+      },
+      "scopeDetail": {
+        "scopes": [
+          {
+            "daysAndTime": {
+              "daysOfWeek": ["SU", "M", "TU", "W", "TH", "F", "SA"],
+              "startTime": "00:00",
+              "endTime": "23:59",
+              "crossOver": false,
+              "shifted": false
+            },
+            "telecastDate": {
+              "firstTelecastDate": {
+                "year": 2020,
+                "month": 3,
+                "day": 10
+              },
+              "lastTelecastDate": {
+                "year": 2020,
+                "month": 3,
+                "day": 24
+              }
+            },
+            "incl": true,
+            "limitEvent": true,
+            "live": false
+          }
+        ]
+      },
+      "division": {
+        "id": "snySLIeiQceMZe2ybCYHvg",
+        "name": "NBC Universo West"
+      },
+      "dayParts": [
+        {
+          "_id": "ZKf9Rk3GS0-e7YKGP2b0MA",
+          "name": "Early Morning",
+          "shortName": "OV",
+          "order": 160,
+          "seqId": 1
+        }
+      ],
+      "commercialTypes": [
+        {
+          "id": "N6qCdVHUSO2oQTBRYgqdog",
+          "name": "SACHK-UP-iiii"
+        }
+      ]
+    }
+  ],
+  "templateName": "Linear",
+  "externalSystemDetails": [
+    {
+      "externalID": "77887788",
+      "extSourceID": "QAk2kX6fQFuShDQ5XOS9ZQ",
+      "extSourceName": "OnAir"
+    }
+  ],
+  "commercialTypesAsc": "Prime Pod, SACHK-UP-iiii",
+  "commercialTypesDesc": "SACHK-UP-iiii, Prime Pod",
+  "channelsAsc": "NBC Universo West, USA",
+  "channelsDesc": "USA, NBC Universo West",
+  "source": {
+    "jobId": "7c6cfeb4-a02e-4ad0-9bac-5a9216dca016",
+    "tenant_name": "devnbcu",
+    "sourceSystem": "aos",
+    "eventTimeStamp": "1584685492000",
+    "targetSytem": "onAir",
+    "operation": "u",
+    "entity": "product",
+    "timestamp": "1585069748346"
+  }
+}

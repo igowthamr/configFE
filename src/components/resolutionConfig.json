@@ -1,0 +1,277 @@
+{
+  "entityName": "aos_to_onair_linear_product",
+  "active": true,
+  "tenantPath": "source.tenant_name",
+  "resolutions": [
+    {
+      "name": "externalSrcObject",
+      "type": "aosUrl",
+      "active": true,
+      "failfast": true,
+      "dependsOn": {
+        "failfast": true,
+        "or": [
+          {
+            "field": "channelDetails.#n.station._id",
+            "type": "PRESENCE_CHECK"
+          },
+          {
+            "field": "channelDetails.#n.station._id",
+            "type": "PRESENCE_CHECK"
+          }
+        ],
+        "and": [
+          {
+            "field": "channelDetails.#n.station._id",
+            "type": "PRESENCE_CHECK"
+          },
+          {
+            "field": "channelDetails.#n.station._id",
+            "type": "PRESENCE_CHECK"
+          }
+        ]
+      },
+      "endpoint": {
+        "uri": "psDefinition/name/onAir",
+        "params": [],
+        "httpMethod": "GET"
+      },
+      "serviceName": "mdm",
+      "manipulator": {
+        "type": "ADD_AT_PATH",
+        "pathToAddAt": "source"
+      },
+      "request": {
+        "body": "",
+        "params": []
+      },
+      "response": {
+        "body": "",
+        "params": []
+      }
+    },
+    {
+      "name": "externalSourceId",
+      "type": "basicTransform",
+      "active": false,
+      "input": "source.externalSrcObject.id",
+      "defaultValue": "",
+      "manipulator": {
+        "type": "ADD_AT_PATH",
+        "pathToAddAt": "source"
+      }
+    },
+    {
+      "name": "resolved_channelId",
+      "type": "aosUrl",
+      "active": true,
+      "failfast": true,
+      "dependsOn": {
+        "failfast": true,
+        "and": [
+          {
+            "field": "channelDetails.#n.station._id",
+            "type": "PRESENCE_CHECK"
+          }
+        ]
+      },
+      "fieldParentArray": "channelDetails.#n.station._id",
+      "endpoint": {
+        "uri": "stations/{?}",
+        "params": ["channelDetails.#n.station._id"],
+        "httpMethod": "GET"
+      },
+      "serviceName": "mdm",
+      "request": {
+        "body": "",
+        "params": []
+      },
+      "response": {
+        "body": "",
+        "params": []
+      },
+      "searchCriteria": {
+        "search": {
+          "and": [
+            {
+              "field": "externalSourceSystems.#n.extSourceID",
+              "type": "VALUE_CHECK",
+              "value": "$@source.externalSourceId"
+            }
+          ]
+        },
+        "failfast": true,
+        "singleNodeSearch": true
+      }
+    },
+    {
+      "name": "resolved_dayPartId",
+      "type": "aosUrl",
+      "active": true,
+      "failfast": true,
+      "dependsOn": {
+        "failfast": true,
+        "and": [
+          {
+            "field": "channelDetails.#n.dayParts.#n._id",
+            "type": "PRESENCE_CHECK"
+          }
+        ]
+      },
+      "fieldParentArray": "channelDetails.#n.dayParts.#n._id",
+      "endpoint": {
+        "uri": "dayparts/{?}",
+        "params": ["channelDetails.#n.dayParts.#n._id"],
+        "httpMethod": "GET"
+      },
+      "serviceName": "mdm",
+      "request": {
+        "body": "",
+        "params": []
+      },
+      "response": {
+        "body": "",
+        "params": []
+      },
+      "searchCriteria": {
+        "search": {
+          "and": [
+            {
+              "field": "externalSourceSystems.#n.extSourceID",
+              "type": "VALUE_CHECK",
+              "value": "$@source.externalSourceId"
+            }
+          ]
+        },
+        "failfast": true,
+        "singleNodeSearch": true
+      }
+    },
+    {
+      "name": "resolved_division",
+      "type": "aosUrl",
+      "active": true,
+      "failfast": true,
+      "dependsOn": {
+        "and": [
+          {
+            "field": "channelDetails.#n.division.id",
+            "type": "PRESENCE_CHECK"
+          }
+        ]
+      },
+      "fieldParentArray": "channelDetails.#n.division.id",
+      "endpoint": {
+        "uri": "division/{?}",
+        "params": ["channelDetails.#n.division.id"],
+        "httpMethod": "GET"
+      },
+      "serviceName": "mdm",
+      "request": {
+        "body": "",
+        "params": []
+      },
+      "response": {
+        "body": "",
+        "params": []
+      },
+      "searchCriteria": {
+        "search": {
+          "and": [
+            {
+              "field": "externalSourceSystems.#n.extSourceID",
+              "type": "VALUE_CHECK",
+              "value": "$@source.externalSourceId"
+            }
+          ]
+        },
+        "failfast": true,
+        "singleNodeSearch": true
+      }
+    },
+    {
+      "name": "resolved_commercialtype",
+      "type": "aosUrl",
+      "active": true,
+      "failfast": true,
+      "dependsOn": {
+        "and": [
+          {
+            "field": "channelDetails.#n.commercialTypes.#n.name",
+            "type": "PRESENCE_CHECK"
+          }
+        ]
+      },
+      "fieldParentArray": "channelDetails.#n.commercialTypes.#n.name",
+      "endpoint": {
+        "uri": "commercialtypegroups/commercialtype/name/{?}",
+        "params": ["channelDetails.#n.commercialTypes.#n.name"],
+        "httpMethod": "GET"
+      },
+      "serviceName": "mdm",
+      "request": {
+        "body": "",
+        "params": []
+      },
+      "response": {
+        "body": "",
+        "params": []
+      },
+      "searchCriteria": {
+        "search": {
+          "and": [
+            {
+              "field": "externalSourceSystems.#n.extSourceID",
+              "type": "VALUE_CHECK",
+              "value": "$@source.externalSourceId"
+            }
+          ]
+        },
+        "failfast": true,
+        "singleNodeSearch": true
+      }
+    },
+    {
+      "name": "resolved_planClasses",
+      "type": "aosUrl",
+      "active": true,
+      "failfast": true,
+      "dependsOn": {
+        "and": [
+          {
+            "field": "planClasses.#n.id",
+            "type": "PRESENCE_CHECK"
+          }
+        ]
+      },
+      "fieldParentArray": "planClasses.#n.id",
+      "endpoint": {
+        "uri": "planclasses/{?}",
+        "params": ["planClasses.#n.id"],
+        "httpMethod": "GET"
+      },
+      "serviceName": "mdm",
+      "request": {
+        "body": "",
+        "params": []
+      },
+      "response": {
+        "body": "",
+        "params": []
+      },
+      "searchCriteria": {
+        "search": {
+          "and": [
+            {
+              "field": "externalSourceSystems.#n.extSourceID",
+              "type": "VALUE_CHECK",
+              "value": "$@source.externalSourceId"
+            }
+          ]
+        },
+        "failfast": true,
+        "singleNodeSearch": true
+      }
+    }
+  ]
+}
